@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sort.css">
+    <title>Sorting Visualizer</title>
+    
+</head>
+<body>
+    <div id="background-img">
+        <nav>
+            <h1>SORTING VISUALIZER</h1>
+            
+        </nav>
+
+        
+        <div class="array" id="array">
+            <!-- <p>Sorting in progress</p> -->
+
+            
+        </div>
+
+        
+
+
+        <div class="btn-group">
+            <button id="bubbleSort" >Bubble Sort</button>
+            <button id="insertionSort" onclick=InsertionSort()>Insertion Sort</button>
+            <button id="selectionSort" onclick=SelectionSort()>Selection Sort</button>
+            <button id="mergeSort">Merge Sort</button>
+            <button id="quickSort" onclick=QuickSort()>Quick Sort</button>
+        </div>
+        <div class="detail">
+            
+            <h3>Bubble Sort Running</h3>
+
+        
+    </div>
+
+
+        <div id="side-btn" class="side-btn">
+
+
+            <a href="#" id="code" onclick=opencode()>Code</a>
+            <a href="#" id="desc" onclick=opendesc()>Crisp Description</a>
+            <a href="#" id="time-complexity" onclick=opentc()>Time Complexity</a>
+          </div>
+
+          <div id="code-snippet" class="code-snippet">
+            <a href="javascript:void(0)" class="closebtn" onclick="closecode()">&times;</a>
+
+            <div class="overlay-content">
+            <h1>CODE</h1>
+            <p><b>void bubbleSort(int arr[], int n)<br>
+                {
+                    int i, j;<br>
+                    for (i = 0; i < n - 1; i++)<br><br>
+                 
+                        // Last i elements are already in place<br>
+                        for (j = 0; j < n - i - 1; j++)<br>
+                            if (arr[j] > arr[j + 1])<br>
+                                swap(arr[j], arr[j + 1]);<br>
+                }</b></p><br>
+
+        </div>
+          </div>
+
+
+          <div id="Description" class="Description">
+            <a href="javascript:void(0)" class="closebtn" onclick="closedesc()">&times;</a>
+
+            <div class="overlay-content">
+            <h1>Description</h1>
+            <p>Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in the wrong order.</p>
+
+        </div>
+          </div>
+
+          <div id="time-complex" class="time-complex">
+            <a href="javascript:void(0)" class="closebtn" onclick="closetc()">&times;</a>
+
+            <div class="overlay-content">
+            <h1>Time Complexity</h1>
+            <p>For Worst case:<br><br>
+
+                Total number of swaps = Total number of comparison<br>
+                Total number of comparison (Worst case) = n(n-1)/2<br>
+                Total number of swaps (Worst case) = n(n-1)/2</p><br>
+
+               <br><b>Worst and Average Case Time Complexity:</b>  O(n*n).<br> The worst case occurs when an array is reverse sorted.<br><br>
+                <b>Best Case Time Complexity:</b> O(n).<br>The best case occurs when an array is already sorted.<br><br>
+                <b>Auxiliary Space:</b> O(1)<br><br>
+                <b>Boundary Cases:</b> Bubble sort takes minimum time (Order of n) <br> when elements are already sorted.<br><br>
+                <b>Sorting In Place:</b> Yes<br><br>
+                Stable: Yes
+
+        </div>
+    </div>
+  
+
+        <div class="functionality">
+
+          <button type="button" id="new-array" class="new-array">Generate array</button>
+
+            <button id="play-btn">Play</button>
+
+            <button id="pause-btn">Pause</button>
+
+        <div id="input">
+            <span id="size">Size
+                <input id="arr_sz" type="range" min="5" max="30" step="1" value="30">
+            </span>
+
+            <span id="speed">Speed
+                <input id="speed_input" type="range" min="20" max="300" stepDown="10" value="60">
+            </span>
+        </div>
+
+        </div>
+
+
+        
+    </div>
+
+    <script src="bubbleSort.js"></script>
+    <script src="selectionSort.js"></script>
+    <script src="insertionSort.js"></script>
+    <script src="quickSort.js"></script>
+    <script src="sort.js"></script>
+    <script src="addJS.js"></script>
+
+</body>
+</html>
